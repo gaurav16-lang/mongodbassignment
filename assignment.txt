@@ -1,0 +1,28 @@
+use assignment
+
+db.createCollection("users")
+
+
+db.user.insert({"first_name":"Gaurav","last_name":"maihuria","email":"maihuriagaurav16@gmail.com","ip_address":"1234","age":22})
+
+
+
+db.user.insertMany([{"id":1,"first_name":"Bethanne","last_name":"Bassingham","email":"bbassingham0@intel.com","gender":"Non-binary","ip_address":"115.234.167.197","age":9},
+... {"id":2,"first_name":"Zaneta","last_name":"Elward","email":"zelward1@privacy.gov.au","gender":"Bigender","ip_address":"215.244.24.118","age":26},
+... {"id":3,"first_name":"Matteo","last_name":"Boydon","email":"mboydon2@dell.com","gender":"Male","ip_address":"47.18.64.213","age":51},
+... {"id":4,"first_name":"Fabio","last_name":"Phettiplace","email":"fphettiplace3@barnesandnoble.com","gender":"Male","ip_address":"83.196.191.151","age":13},
+... {"id":5,"first_name":"Shara","last_name":"Minger","email":"sminger4@home.pl","gender":"Bigender","ip_address":"29.63.63.191","age":88},
+... {"id":6,"first_name":"Harald","last_name":"Greaser","email":"hgreaser5@springer.com","gender":"Agender","ip_address":"226.45.228.147","age":65},
+... {"id":7,"first_name":"Agosto","last_name":"Heffernon","email":"aheffernon6@amazon.com","gender":"Genderfluid","ip_address":"6.77.14.223","age":72},
+... {"id":8,"first_name":"Antonietta","last_name":"Giamitti","email":"agiamitti7@bandcamp.com","gender":"Polygender","ip_address":"84.234.98.91","age":20},
+... {"id":9,"first_name":"Renado","last_name":"Kupka","email":"rkupka8@rediff.com","gender":"Bigender","ip_address":"93.34.152.223","age":59},
+... {"id":10,"first_name":"Gavra","last_name":"Giorio","email":"ggiorio9@google.it","gender":"Agender","ip_address":"139.170.169.154","age":86}])
+
+
+ db.user.updateMany({"ip_address":"1234"},{$set:{"ip_address":"0000"}})
+
+db.user.update({"first_name":"Gaurav"},{$set:{"first_name":"Dhaval"}})
+
+ db.user.remove({"first_name":"Dhaval"})
+
+ db.user.remove({})
